@@ -1,6 +1,7 @@
 # MusicalSunburst
 CS 205 Final Project
-Connor Allan, Jack Houk, Jake Liu, Shravya Suddala
+
+Contributors: Connor Allan, Jack Houk, Jake Liu, Shravya Suddala
 
 
 For our final project, we chose to program with Python using Django as our web framework. We have chosen to use mySQL to create our database. We decided to make a website that hosts our database of songs using a dataset that includes url, week_ID, ranking, song_ID, songs, artists, years, youtube link, genre. We hope to sort this database by year or genre as well as visually see in a timeline format what genre was popular a certain year. We have yet to decide on how we will visualize our data but we are leaning towards a sunburst chart. An example of the sunburst chart can be found here: (https://bl.ocks.org/vasturiano/12da9071095fbd4df434e60d52d2d58d).
