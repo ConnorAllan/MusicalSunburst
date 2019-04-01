@@ -1,0 +1,19 @@
+BEGIN;
+--
+-- 
+Create model Artists                                                                                                                                  
+	CREATE TABLE "sunburst_artists" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "pmkArtist" varchar(50) NOT NULL, "fldName" varchar(20) NOT NULL, "fldLocation" varchar(70) NOT NULL);
+--
+-- 
+Create model Releases                                                            --                                                                                  CREATE TABLE "sunburst_releases" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "pmkRelease" integer NOT NULL, "fldName" varchar(100) NOT NULL, "fnkArtist_id" integer NOT NULL REFERENCES "sunburst_artists" ("id") DEFERRABLE INITIALLY DEFERRED);     
+--                                                                                  
+-- 
+Create model Songs                                                               --                                                                                  CREATE TABLE "sunburst_songs" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "pmkSong" varchar(20) NOT NULL, "fldTerms" varchar(30) NOT NULL, "fldTitle" varchar(100) NOT NULL, "fldYear" integer NOT NULL, "fnkArtist_id" integer NOT NULL REFERENCES "sunburst_artists" ("id") DEFERRABLE INITIALLY DEFERRED);                             
+--                                                                                  
+-- Add field fnkSong to releases                                                    
+--                                                                                  
+ALTER TABLE "sunburst_releases" RENAME TO "sunburst_releases__old";                 
+CREATE TABLE "sunburst_releases" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "pmkRelease" integer NOT NULL, "fldName" varchar(100) NOT NULL, "fnkArtist_id" integer NOT NULL REFERENCES "sunburst_artists" ("id") DEFERRABLE INITIALLY DEFERRED, "fnkSong_id" integer NOT NULL REFERENCES "sunburst_songs" ("id") DEFERRABLE INITIALLY DEFERRED);                                                                             
+INSERT INTO "sunburst_releases" ("id", "pmkRelease", "fldName", "fnkArtist_id", "fnkSong_id") SELECT "id", "pmkRelease", "fldName", "fnkArtist_id", NULL FROM "sunburst_releases__old";                                                                     
+DROP TABLE "sunburst_releases__old";                                                
+CREATE INDEX "sunburst_songs_fnkArtist_id_cab80eae" ON "sunburst_songs" ("fnkArtist_id");                                                                               CREATE INDEX "sunburst_releases_fnkArtist_id_2d85f80c" ON "sunburst_releases" ("fnkArtist_id");                                                                         CREATE INDEX "sunburst_releases_fnkSong_id_2ab76702" ON "sunburst_releases" ("fnkSong_id");                                                                             COMMIT;
