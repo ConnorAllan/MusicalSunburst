@@ -1,6 +1,6 @@
 # MusicalSunburst
-CS 205 Final Project ...
-Contributors: Connor Allan, Jack Houk, Jake Liu, Shravya Suddala ...
+CS 205 Final Project
+Contributors: Connor Allan, Jack Houk, Jake Liu, Shravya Suddala
 
 ---
 
