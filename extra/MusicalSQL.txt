@@ -1,5 +1,5 @@
-CREATE TABLE sunburst_artists ("index" INTEGER PRIMARY KEY AUTOINCREMENT, pmkArtist TEXT NOT NULL, fldName TEXT NOT NULL, fldLocation TEXT);                            
+CREATE TABLE sunburst_artists ("index" INTEGER PRIMARY KEY AUTOINCREMENT, pmkArtist TEXT NOT NULL, fldName TEXT NOT NULL, fldLocation TEXT);   
 
-CREATE TABLE sunburst_songs ("index" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, pmkSong TEXT NOT NULL, fnkArtist TEXT NOT NULL, fldTerms TEXT, fldTitle TEXT NOT NULL, fldYear INT DEFAULT (0) NOT NULL);                                                  
+CREATE TABLE sunburst_songs ("index" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, pmkSong TEXT NOT NULL, fnkArtist TEXT NOT NULL, fldTerms TEXT, fldTitle TEXT NOT NULL, fldYear INT DEFAULT (0) NOT NULL);                                 
 
 CREATE TABLE sunburst_releases ("index" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, pmkRelease INTEGER NOT NULL, fldName TEXT NOT NULL, fnkArtist TEXT NOT NULL, fnkSong TEXT NOT NULL); 
