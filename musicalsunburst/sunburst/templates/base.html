@@ -7,6 +7,16 @@
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     </head>
     <body>  
+	<nav>
+		<ol class="nav">
+			<li><a href="{%url 'index'%}"> Index/Home </a></li>
+			<li><a href="{%url 'Search By Song'%}"> Search By Song </a></li>
+			<li><a href="{%url 'Search By Artist'%}"> Search By Artist </a></li>
+			<li><a href="{%url 'Search By Year'%}"> Search By Year </a></li>
+			<li><a href="{%url 'View Database'%}"> View Database </a></li>
+			<li><a href="{%url 'View Schema'%}"> View Schema </a></li>
+			<li><a href="{%url 'View Sunburst Chart'%}"> View Sunburst Chart </a></li>
+		</ol>
+	</nav>		
     </body>
 </html>
-	
