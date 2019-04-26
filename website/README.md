@@ -277,7 +277,7 @@ python manage.py migrate //py
 		</ul>		
 		```
 # Remove hardcoded urls
-		we will work with the index.html
+ 		we will work with the index.html
 
 		Initial
 		```{% if all_album %}
