@@ -1,31 +1,27 @@
-from django.http import Http404
+from django.shortcuts import render
 from django.http import HttpResponse
-from django.shortcuts import render , redirect ,get_object_or_404
-#This is so that user if looged in gets redirected
-from django.contrib.auth import authenticate , login
-#This is for loging and authentication
-from .models import Album
-from .forms import UserForm
+
+# Create your views here.
 
 def index(request):
-    all_album=Album.objects.all()
+    all_releases=Releases.objects.all()
     context={
-        'all_album' : all_album,
+        'all_albums' : all_releases,
     }
     return render(request,'music/index.html',context)
 
 
-def detail(request,albumn_id):
-    album = get_object_or_404(Album,pk=album_id)
+def detail(request,release_id):
+    release = get_object_or_404(Album,pk=pmkRelease)
     return render(request,'music/detail.html',context)
 
-def favorite(request,album_id):
-    album=Album.objects.get(pk=album_id)
+def favorite(request,release_id):
+    releases=Releases.objects.get(pk=pmkRelease)
     try:
-        sectected_song=album.song_set.get(pk=request.POST['song'])
+        sectected_song=release.song_set.get(pk=request.POST['song'])
     except (KeyError , Song.DoesNotExist):
         return render(request , 'music/detail.html',{
-            'album':album,
+            'release':release,
             'error_message':"Invalid option",
             })
     else:
@@ -72,3 +68,4 @@ def UserFormView(View):
                     return redirect('music:index')
 
         return render(request,self.template_name, {'form':form})
+
