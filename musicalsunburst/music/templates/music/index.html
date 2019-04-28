@@ -6,22 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        {% block nav %}
+	<ul>
+            
+        </ul>
+        {% endblock %}
         <table>
             <thead>
                 <tr>
                     <th>Release Name</th>
-                    <th>Song Name</th>
-                    <th>Artist Name</th>
-                    <th>Year</th>
-                <tr>
-            </thead>
-            <tbody>
-                {% for release in releases_list %}
-                <tr>
-                    <td><a href="/music/{{ release.id }}/">{{ release.fldName }}</a></td>
-                    <td>{{ release.fnkSong.fldTitle }}</td>
-                    <td>{{ release.fnkArtist.fldName }}</td>
-                    <td>{{ release.fnkSong.fldYear }}</td>
+<th>Song Name</th>
+<th>Artist Name</th>
+<th>Year</th>
+<tr>
+</thead>
+<tbody>
+{% for release in releases_list %}
+<tr>
+    <td><a href="/music/{{ release.pmkRelease }}/">{{ release.fldName }}</a></td>
+    <td>{{ release.fnkSong.fldTitle }}</td>
+    <td>{{ release.fnkArtist.fldName }}</td>
+    <td>{{ release.fnkSong.fldYear }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

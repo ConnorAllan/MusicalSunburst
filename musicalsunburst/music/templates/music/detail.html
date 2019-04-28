@@ -6,8 +6,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>{{ release.fldName }}</h1>
-        <ul>
-        </ul>
+        <h1>Details for release: {{ release.fldName }}</h1>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ release.fnkSong.fldTitle }}</td>
+            </tr>
+
+            <tr>
+                <th>Artist</th>
+                <td>{{ release.fnkArtist.fldName }}</td>
+            </tr>
+
+            <tr>
+                <th>Album</th>
+                <td>{{ release.fldName }}</td>
+            </tr>
+            <tr>
+                <th>Year</th>
+                <td>{{ release.fnkSong.fldYear }}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{ release.fnkSong.fldTerms }}</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>{{ release.fnkArtist.fldLocation }}</td>
+            </tr>
+        </table>
     </body>
 </html>
