@@ -19,9 +19,9 @@
                 {% for release in releases_list %}
                 <tr>
                     <td><a href="/music/{{ release.id }}/">{{ release.fldName }}</a></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{ release.fnkSong.fldTitle }}</td>
+                    <td>{{ release.fnkArtist.fldName }}</td>
+                    <td>{{ release.fnkSong.fldYear }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
