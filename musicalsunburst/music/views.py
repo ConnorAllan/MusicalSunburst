@@ -1,6 +1,4 @@
-from django.http import HttpResponse
-from django.shortcuts import get_object_or_404, render
-from django.template import loader
+from django.shortcuts import get_object_or_404, get_list_or_404, render
 
 from sunburst.models import Releases
 
@@ -9,6 +7,7 @@ from sunburst.models import Releases
 def index(request):
     ## Pulls releases table from the database
     releases_list = Releases.objects.all()
+##    releases_list = get_list_or_404(Releases)
 
     ## passes the list of objects into a contex meaning
     context = {'releases_list': releases_list}

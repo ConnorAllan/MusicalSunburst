@@ -7,9 +7,9 @@
     </head>
     <body>
 
-        {% if Releases_list %}
+        {% if releases_list%}
         <ul>
-            {% for release in Releases_list %}
+            {% for release in releases_list%}
             <li><a href="/music/{{ release.id }}/">{{ release.fldName }}</a></li>
             {% endfor %}
         </ul>
