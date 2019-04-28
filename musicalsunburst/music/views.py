@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.template import loader
 
-from .models import Releases
+from sunburst.models import Releases
 
 # Create your views here.
 
@@ -18,7 +18,7 @@ def index(request):
 
 def detail(request, release_id):
     ## Generates a check for a 404 error
-    release = get_object_or_404(Releases, pk=id)
+    release = get_object_or_404(Releases, pk=release_id)
 
     ## Either draws a 404 error or brings user to details page about the release
-    return render(request, 'music/detail.html', {'releases': releases})
+    return render(request, 'music/detail.html', {'release': release})
