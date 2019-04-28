@@ -1,4 +1,5 @@
-from django.shortcuts import get_object_or_404, get_list_or_404, render
+from django.shortcuts import get_object_or_404, render
+from django.core.paginator import Paginator
 
 from sunburst.models import Releases
 
@@ -7,10 +8,11 @@ from sunburst.models import Releases
 def index(request):
     ## Pulls releases table from the database
     releases_list = Releases.objects.all()
-##    releases_list = get_list_or_404(Releases)
+    paginator = Paginator(releases_list, 50) ## shows 50 releases per page
+    page = request.GET.get('page')
 
     ## passes the list of objects into a contex meaning
-    context = {'releases_list': releases_list}
+    context = {'releases_list': paginator.get_page(page)}
 
     ## Draws them in the browser, mixing the index.html with the list of Releases
     return render(request, 'music/index.html', context)

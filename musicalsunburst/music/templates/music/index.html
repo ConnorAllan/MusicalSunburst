@@ -6,17 +6,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+	<ol>
+        {% for release in releases_list %}
+    		<li><a href="/music/{{ release.id }}/">{{ release.fldName }}</a></li>
+	{% endfor %}
+	</ol>
 
-        {% if releases_list%}
-        <ul>
-            {% for release in releases_list%}
-            <li><a href="/music/{{ release.id }}/">{{ release.fldName }}</a></li>
-            {% endfor %}
-        </ul>
-        {% else %}
-        <p>No releases are available.</p>
+<div class="pagination">
+    <span class="step-links">
+        {% if releases_list.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ releases_list.previous_page_number }}">previous</a>
         {% endif %}
 
+        <span class="current">
+            Page {{ releases_list.number }} of {{ releases_list.paginator.num_pages }}.
+        </span>
+
+        {% if releases_list.has_next %}
+            <a href="?page={{ releases_list.next_page_number }}">next</a>
+            <a href="?page={{ releases_list.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
 
     </body>
 </html>
