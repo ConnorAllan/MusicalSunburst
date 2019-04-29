@@ -1,4 +1,9 @@
+{% load static %}
 <head>
+	<title>Musical Sunburst Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 <!--- Code based on https://bl.ocks.org/vasturiano/12da9071095fbd4df434e60d52d2d58d --->
     <style>
         body {
@@ -185,6 +190,13 @@
         </script>
 </head>
 <body>
+	<nav>
+		<ul class="nav">
+			<li><a href="{%url 'index'%}"> Sunburst Chart </a></li>
+			<li><a href="http://127.0.0.1:8000/music/"> Music </a></li>
+			<li><a href="{%url 'aboutus' %}"> About us </a></li>
+		</ul>
+	</nav>
     <div>
             <select name="Year" id="yearPick">
                     <script>
