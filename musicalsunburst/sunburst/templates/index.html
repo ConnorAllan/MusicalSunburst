@@ -1,9 +1,0 @@
-{% if Releases_list %}
-    <ul>
-    {% for release in Releases_list %}
-        <li><a href="/music/{{ release.id }}/">{{ release.fldName }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No Releases are available.</p>
-{% endif %}

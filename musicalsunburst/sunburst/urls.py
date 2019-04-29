@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
         path('', views.index, name='index'),
-        path('AJAX', views.restReq, name='api')
+        path('AJAX', views.restReq, name='api'),
+        path('', views.aboutus, name='aboutus')
 ]

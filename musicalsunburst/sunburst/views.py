@@ -9,6 +9,9 @@ import json
 def index(request):
     return render(request, 'ajaxDemo/ajaxDemo.html')
 
+def aboutus(request):
+    return render(request, 'aboutus.html') 
+
 def restReq(request):
 
     nested_dict = defaultdict(
@@ -59,5 +62,3 @@ def restReq(request):
     result = results[random.randint(0, 20)]
     
     return HttpResponse(result)
-
-    
