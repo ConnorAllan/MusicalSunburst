@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% block title %}<title>WHEN NO ONE ANSWERS ME!!</title>{% endblock %}
+        <title>{% block title %}Musical Sunburst Project{% endblock %}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>  
 	<nav>
-		<ol class="nav">
+		<ul class="nav">
 			<li><a href="{%url 'index'%}"> Index/Home </a></li>
 			<li><a href="{%url 'Search By Song'%}"> Search By Song </a></li>
 			<li><a href="{%url 'Search By Artist'%}"> Search By Artist </a></li>
@@ -16,7 +16,10 @@
 			<li><a href="{%url 'View Database'%}"> View Database </a></li>
 			<li><a href="{%url 'View Schema'%}"> View Schema </a></li>
 			<li><a href="{%url 'View Sunburst Chart'%}"> View Sunburst Chart </a></li>
-		</ol>
-	</nav>		
+		</ul>
+	</nav>	
+	<div id="content">
+		{% block content %}{% endblock %}
+	</div>	
     </body>
 </html>
