@@ -1,0 +1,58 @@
+img{
+    height: 250px;
+    width: 200px;
+}
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+/*about us*/
+body {
+    background-color: lightblue;
+}
+.aboutus {
+    text-align: center;
+    font-size: 30px;
+    font-family: serif;
+    font-style: italic;
+}
+
+.us{
+    text-align: center;
+}
+/* nav css */
+
+nav{
+    background-color: plum;
+    padding: 1em;
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 2px;
+    text-align: center;
+    width: 6em;
+}
+
+nav ul li:hover{
+    background-color: lightseagreen;
+    border: 2px solid lightseagreen;
+    padding: 1px;
+}
+nav a:link{
+    color: #009;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: none;
+}
+
+nav ol li{
+    display: inline-block;
+    list-style-type: none;
+    width: 6em;
+    padding-right: 3em;
+}

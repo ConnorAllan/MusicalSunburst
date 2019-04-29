@@ -1,13 +1,37 @@
+img{
+    height: 250px;
+    width: 200px;
+}
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+/*about us*/
+body {
+    background-color: lightblue;
+}
+.aboutus {
+    text-align: center;
+    font-size: 30px;
+    font-family: serif;
+    font-style: italic;
+}
+
+.us{
+    text-align: center;
+}
 /* nav css */
 
 nav{
     background-color: plum;
-    padding: 3em;
+    padding: 1em;
 }
 nav ul li{
     display: inline-block;
     list-style-type: none;
-    padding: 3px;
+    padding: 2px;
     text-align: center;
     width: 6em;
 }
@@ -15,10 +39,8 @@ nav ul li{
 nav ul li:hover{
     background-color: lightgoldenrodyellow;
     border: 2px solid brown;
-    padding: 4px;
+    padding: 1px;
 }
-
-/*added for lab 8*/
 nav a:link{
     background-color: #fff;
     color: #009;
