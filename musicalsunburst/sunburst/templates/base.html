@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% block title %}<title>Musical Sunburst Project</title>{% endblock %}
+        <title>{% block title %}Musical Sunburst Project{% endblock %}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>  
 	<nav>
@@ -17,6 +17,9 @@
 			<li><a href="{%url 'View Schema'%}"> View Schema </a></li>
 			<li><a href="{%url 'View Sunburst Chart'%}"> View Sunburst Chart </a></li>
 		</ul>
-	</nav>		
+	</nav>	
+	<div id="content">
+		{% block content %}{% endblock %}
+	</div>	
     </body>
 </html>
