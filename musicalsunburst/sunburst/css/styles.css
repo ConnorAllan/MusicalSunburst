@@ -1,0 +1,37 @@
+/* nav css */
+
+nav{
+    background-color: plum;
+    padding: 3em;
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 3px;
+    text-align: center;
+    width: 6em;
+}
+
+nav ul li:hover{
+    background-color: lightgoldenrodyellow;
+    border: 2px solid brown;
+    padding: 4px;
+}
+
+/*added for lab 8*/
+nav a:link{
+    background-color: #fff;
+    color: #009;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: none;
+}
+
+nav ol li{
+    display: inline-block;
+    list-style-type: none;
+    width: 6em;
+    padding-right: 3em;
+}
