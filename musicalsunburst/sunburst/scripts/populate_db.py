@@ -15,6 +15,8 @@ def run():
                                           fldLocation = "Not available")
     with open(dataDir + "Artists.csv") as csvFile:
         reader = csv.reader(csvFile)
+        #skip headers
+        next(reader)
         for row in reader:
             #make sure the artist isn't already in the system, skips conflictingg entries
             preExisting = Artists.objects.filter(pmkArtist = row[1])
@@ -33,6 +35,7 @@ def run():
     print("\nLoading Songs")
     with open(dataDir + "Songs.csv") as csvFile:
         reader = csv.reader(csvFile)
+        next(reader)
         for row in reader:
             
             preExisting = Songs.objects.filter(pmkSong = row[1])
@@ -64,6 +67,7 @@ def run():
     print("\nLoading Releases")        
     with open(dataDir + "Releases.csv") as csvFile:
         reader = csv.reader(csvFile)
+        next(reader)
         for row in reader:
             
             #drop the row if it has no primary key
