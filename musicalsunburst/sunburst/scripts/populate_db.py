@@ -47,9 +47,10 @@ def run():
             
             #If we can't find the artist then set it to unknown
             try:
-                fnArtist = Artists.objects.filter(pmkArtist=row[2])[0]
+                fnArtist = Artists.objects.get( pmkArtist = row[2] )
             except:
-                fnArtist = Artists.objects.filter(pmkArtist='0')[0]
+                print("ARTIST UNKNOWN")
+                fnArtist = Artists.objects.get( pmkArtist = '0')
                 
             Songs.objects.get_or_create(pmkSong = row[1],
                                         fnkArtist = fnArtist,
@@ -76,15 +77,17 @@ def run():
                 continue
             
             #If we can't find the artist then set it to unknown
-            if Artists.objects.filter(pmkArtist=row[2]).count():
-                fnArtist = Artists.objects.filter(pmkArtist=row[2])[0]
-            else:
-                fnArtist = Artists.objects.filter(pmkArtist='0')[0]
+            try:
+                fnArtist = Artists.objects.get(pmkArtist=row[3])
+            except:
+                print("ARTIST UNKNOWN")
+                fnArtist = Artists.objects.get( pmkArtist = '0')
                 
             #See if we can find the associated song, drop row if not found since this is a song DB
-            if Songs.objects.filter(pmkSong=row[4]).count():
-                fnSong = Songs.objects.filter(pmkSong=row[4])[0]
-            else:
+            try:
+                fnSong = Songs.objects.get(pmkSong=row[4])
+            except:
+                print("SONG UNKNOWN")
                 continue
             
             Releases.objects.get_or_create(pmkRelease = pmk,
