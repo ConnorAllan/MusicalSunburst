@@ -1,58 +1,56 @@
-img{
-    height: 250px;
-    width: 200px;
+/* General Rules */
+body{
+    width:85%;
+    
+    margin-left: auto;
+    margin-right: auto;
 }
-.column {
-  float: left;
-  width: 20%;
-  padding: 5px;
+script{
+    display:none;
 }
-
-/*about us*/
-body {
-    background-color: lightblue;
-}
-.aboutus {
-    text-align: center;
-    font-size: 30px;
-    font-family: serif;
-    font-style: italic;
+style{
+    display:none;
 }
 
-.us{
-    text-align: center;
-}
 /* nav css */
-
 nav{
-    background-color: plum;
-    padding: 1em;
+    width: 100%;
+    display:inline-block;
+    background-color: #b2d23e;
+}
+nav ul{
+    width:100%;
+    margin:0;
+    padding: 0;
 }
 nav ul li{
-    display: inline-block;
-    list-style-type: none;
-    padding: 2px;
+    display:inline-block;
+    padding: 1em 0 1em 0;
+    margin:0;
     text-align: center;
-    width: 6em;
+    width:32.8%;
 }
-
 nav ul li:hover{
-    background-color: lightseagreen;
-    border: 2px solid lightseagreen;
-    padding: 1px;
+    background-color: #007155;
+    padding:1em 0 1em 0;
+    color:white;
 }
-nav a:link{
-    color: #009;
+nav a:visited, nav a:hover, nav a:link{
+    color:white;
     text-decoration: none;
 }
 
-nav a:hover{
-    text-decoration: none;
+/* About us */
+.row{
+    columns:4;
 }
 
-nav ol li{
-    display: inline-block;
-    list-style-type: none;
-    width: 6em;
-    padding-right: 3em;
+/* Music */
+table,tr,td,th{
+    border:1px solid black;
+    border-collapse:collapse;
+    padding: .3em;
+}
+tr:hover{
+    background-color: orange;
 }

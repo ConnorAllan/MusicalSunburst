@@ -1,0 +1,27 @@
+[ N 2019-05-01 10:18:16.4538 15094/T1 age/Wat/WatchdogMain.cpp:1267 ]: Starting Passenger watchdog...
+[ N 2019-05-01 10:18:16.4637 15097/T1 age/Cor/CoreMain.cpp:1165 ]: Starting Passenger core...
+[ N 2019-05-01 10:18:16.4640 15097/T1 age/Cor/CoreMain.cpp:249 ]: Passenger core running in multi-application mode.
+[ N 2019-05-01 10:18:16.4693 15097/T1 age/Cor/CoreMain.cpp:905 ]: Passenger core online, PID 15097
+App 15181 stdout: 
+[ E 2019-05-01 10:18:19.0233 15097/T5 age/Cor/SecurityUpdateChecker.h:376 ]: A security update is available for your version (5.1.12) of Passenger, we strongly recommend upgrading to version 6.0.1.
+[ E 2019-05-01 10:18:19.0233 15097/T5 age/Cor/SecurityUpdateChecker.h:381 ]:  Additional information: 
+- [Fixed in 5.3.2] [CVE-2018-12026, 12027, and 12028] These are local denial of service, local information disclosure and local privilege escalation vulnerabilities that could be exploited by malicious applications or malicious users on the system.
+- [Fixed in 5.3.2] [CVE-2018-12029] A local privilege escalation vulnerability existed in the Nginx module that occurs when `passenger_instance_registry_dir` is configured to a directory with lax permissions.
+App 15181 stderr: [ pid=15181, time=2019-05-01 09:18:19,081 ]: Invalid HTTP_HOST header: '0.0.0.0'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+App 15181 stderr: [ pid=15181, time=2019-05-01 09:18:19,125 ]: Bad Request: /
+
+[ N 2019-05-01 10:18:24.5555 15097/T7 age/Cor/CoreMain.cpp:589 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2019-05-01 10:18:24.5556 15097/T1 age/Cor/CoreMain.cpp:1080 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2019-05-01 10:18:24.5556 15097/T1 age/Cor/CoreMain.cpp:994 ]: Checking whether to disconnect long-running connections for process 15181, application /users/c/r/crallan/www-root/musicalsunburst/public (development)
+[ N 2019-05-01 10:18:24.5558 15097/Tg Ser/Server.h:886 ]: [ApiServer] Freed 0 spare client objects
+[ N 2019-05-01 10:18:24.5558 15097/Tg Ser/Server.h:531 ]: [ApiServer] Shutdown finished
+[ N 2019-05-01 10:18:24.5559 15097/T7 Ser/Server.h:886 ]: [ServerThr.1] Freed 128 spare client objects
+[ N 2019-05-01 10:18:24.5559 15097/Tb Ser/Server.h:886 ]: [ServerThr.3] Freed 128 spare client objects
+[ N 2019-05-01 10:18:24.5559 15097/T7 Ser/Server.h:531 ]: [ServerThr.1] Shutdown finished
+[ N 2019-05-01 10:18:24.5559 15097/Tb Ser/Server.h:531 ]: [ServerThr.3] Shutdown finished
+[ N 2019-05-01 10:18:24.5560 15097/Td Ser/Server.h:886 ]: [ServerThr.4] Freed 128 spare client objects
+[ N 2019-05-01 10:18:24.5560 15097/Td Ser/Server.h:531 ]: [ServerThr.4] Shutdown finished
+[ N 2019-05-01 10:18:24.5560 15097/T9 Ser/Server.h:886 ]: [ServerThr.2] Freed 128 spare client objects
+[ N 2019-05-01 10:18:24.5560 15097/T9 Ser/Server.h:531 ]: [ServerThr.2] Shutdown finished
+[ N 2019-05-01 10:18:24.5561 15097/T1 age/Cor/CoreMain.cpp:994 ]: Checking whether to disconnect long-running connections for process 15181, application /users/c/r/crallan/www-root/musicalsunburst/public (development)
+[ N 2019-05-01 10:18:24.7199 15097/T1 age/Cor/CoreMain.cpp:1150 ]: Passenger core shutdown finished
