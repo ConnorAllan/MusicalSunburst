@@ -1,11 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>Musical Sunburst</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     </head>
-    <body>
+        <body>
+	<nav>
+		<ul class = "nav">
+			<li><a href="{%url 'index'%}"> Sunburst Chart </a></li>
+			<li><a href="http://127.0.0.1:8000/music/"> Music </a></li>
+			<li><a href="{%url 'aboutus' %}"> About us </a></li>
+		</ul>
+	</nav>	
         <h1>Details for release: {{ release.fldName }}</h1>
         <table>
             <tr>
