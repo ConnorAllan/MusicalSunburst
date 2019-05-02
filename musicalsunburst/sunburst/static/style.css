@@ -42,7 +42,17 @@ nav a:visited, nav a:hover, nav a:link{
 
 /* About us */
 .row{
+    display: inline-block;
     columns:4;
+}
+img{
+    display: inherit;
+    width:100%;
+    vertical-align: top;
+}
+.column{
+    display: inherit;
+    vertical-align: top;
 }
 
 /* Music */
