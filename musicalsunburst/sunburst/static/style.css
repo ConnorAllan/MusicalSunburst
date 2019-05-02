@@ -1,9 +1,14 @@
 /* General Rules */
+html{
+    background-color:wheat;
+}
 body{
     width:85%;
-    
+    background-color:white;
     margin-left: auto;
     margin-right: auto;
+    margin-top:0;
+    padding:0em 1em 0em 1em;
 }
 script{
     display:none;
@@ -14,6 +19,9 @@ style{
 
 /* nav css */
 nav{
+    padding-left:1em;
+    padding-right:1em;
+    margin-left:-1em;
     width: 100%;
     display:inline-block;
     background-color: #b2d23e;
