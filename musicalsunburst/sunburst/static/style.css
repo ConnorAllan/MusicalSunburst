@@ -30,22 +30,28 @@ nav ul{
     width:100%;
     margin:0;
     padding: 0;
+    overflow:hidden;
+    list-style-type:none;
 }
-nav ul li{
-    display:inline-block;
-    padding: 1em 0 1em 0;
-    margin:0;
+nav li{
+    float:left;
+}
+nav ul li a{
+    display:block;
+    padding: 1em 3em ;
     text-align: center;
-    width:32.8%;
+    text-decoration: none;
 }
-nav ul li:hover{
+nav ul li a:hover{
     background-color: #007155;
-    padding:1em 0 1em 0;
     color:white;
 }
 nav a:visited, nav a:hover, nav a:link{
     color:white;
     text-decoration: none;
+}
+nav a{
+    padding:1em 5em 1em 5em;
 }
 
 /* About us */
