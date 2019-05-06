@@ -200,7 +200,11 @@
                     <script>
                         options = ""
                         for( let i = 1950; i < 2018; i++ ){
-                            options += `<option value=${i}>${i}</option>`
+				if(i == 2002){
+				options += `<option value=${i} selected>${i}</option>`
+				}else {
+                           	 options += `<option value=${i}>${i}</option>`
+				}
                         }
                         document.getElementById("yearPick").innerHTML = options
                     </script>
@@ -211,6 +215,6 @@
     <div id="sunburstChart">
     </div>
     <script>
-        window.onload = sunburst(2001);
+        window.onload = sunburst(2002);
     </script>
 </body>
